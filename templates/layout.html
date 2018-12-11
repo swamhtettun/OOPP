@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">SMARTHOME</a>
+      <a class="navbar-brand" href="/">SMARTHOME</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -27,7 +27,7 @@
         <li><a href="http://127.0.0.1:5000/guide/">GUIDE</a></li>
         <li><a href="http://127.0.0.1:5000/game/">GAME</a></li>
         <li><a href="http://127.0.0.1:5000/shop/">SHOP</a></li>
-		<li><a href="http://127.0.0.1:5000/faq/">FAQ</a></li>
+        <li><a href="http://127.0.0.1:5000/faq/">FAQ</a></li>
         <li><a href="http://127.0.0.1:5000/login/">LOGIN</a></li>
         <li><a href="http://127.0.0.1:5000/register/">REGISTER</a></li>
       </ul>
@@ -35,39 +35,11 @@
   </div>
 </nav>
 <div>
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 </div>
 
 <script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
-
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
 </script>
 </body>
 </html>
