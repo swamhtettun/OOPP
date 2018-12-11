@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html>
-<style>
+<head>
+    <link href="{{ url_for('static', filename='css/home_layout.css') }}" rel="stylesheet">
+    <script src="/static/js/home.js"></script>
+    <style>
 img {
   width: 100vw;
 }
-</style>
+
+    </style>
+</head>
 <body>
-    {% extends "layout.html" %}
-    {% block content %}
-      <div class="home">
-        <img src="{{url_for('static', filename='images/HomePage.png')}}" />
-      </div>
-    {% endblock %}
+{% extends "layout.html" %}
+{% block content %}
+<div class="home">
+    <img src="{{url_for('static', filename='images/HomePage.png')}}"/>
+    <div class="yay">
+        <h1>Welcome To SMARTHOME</h1>
+        <p>Click on the boxes below:</p>
+    </div>
+    <div class="column" onclick="openTab('b1')" style="background:grey;">
+        <h1>Guide</h1>
+    </div>
+    <div class="column" onclick="openTab('b2')" style="background:grey;">
+        <h1>Game</h1>
+    </div>
+    <div class="column" onclick="openTab('b3')" style="background:grey;">
+        <h1>Shop</h1>
+    </div>
+    <div class="column" onclick="openTab('b4')" style="background:grey;">
+        <h1>FAQ</h1>
+    </div>
 
-  <script>
-  $(document).ready(function(){
-    // Initialize Tooltip
-    $('[data-toggle="tooltip"]').tooltip();
+    <div id="b1" class="containerTab" style="display:none;background:#CACACA">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h1><a href="http://127.0.0.1:5000/guide/">Guide</a></h1>
+        <p>Learn more about SMARTHOME and its benefits and examples.</p>
+    </div>
 
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    <div id="b2" class="containerTab" style="display:none;background:#CACACA">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h1><a href="http://127.0.0.1:5000/game/">Game</a></h1>
+        <p>Play a fun and exciting game as well as learning facts about SMARTHOME.</p>
+    </div>
 
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
+    <div id="b3" class="containerTab" style="display:none;background:#CACACA">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h1><a href="http://127.0.0.1:5000/shop/">Shop</a></h1>
+        <p>Want to get some of the SMARTHOME products? Go to our shop and purchase some RIGHT NOW!!!</p>
+    </div>
 
-        // Prevent default anchor click behavior
-        event.preventDefault();
+    <div id="b4" class="containerTab" style="display:none;background:#CACACA">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h1><a href="http://127.0.0.1:5000/faq/">FAQ</a></h1>
+        <p>If you got any enquiries, do check out our FAQ.</p>
+    </div>
+</div>
+{% endblock %}
 
-        // Store hash
-        var hash = this.hash;
+<script>
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 900, function(){
+</script>
 
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  })
-  </script>
 </body>
 </html>
