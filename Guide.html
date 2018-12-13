@@ -10,6 +10,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Guide</title>
     <style>
+      * {
+          box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 40%;
+          padding: 20px;
+          height: 250px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
       body {
           font: 400 15px/1.8 Lato, sans-serif;
           color: #777;
@@ -58,8 +76,10 @@
       }
      </style>
 </head>
-
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<br>
+<br>
+<div>
+    <p id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -83,33 +103,65 @@
         </div>
       </div>
     </nav>
+    <div style="padding-left:150px;">
     <p>
         <h2>
             Introduction: What Is Smart Home:
         </h2>
     </p>
+    </div>
+    <div class="row" style="padding-left:150px;">
+    <div class="column" style="background-color:#aaa;">
     <p>
         Smart home technology, sometimes referred as home automation, provides homeowners
         security, comfort, convenience, and energy efficiency by allowing them to control
         smart devices through the use of a smart home app in their phones or other devices.
         Smart home systems and devices often operate together as a part of the internet of
         things(IoT), sharing consumer usage data among themselves, automating actions based
-        on the homeowners' preferences.<br>
-        <br>
+        on the homeowners' preferences.
+    </p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        <p></p>
+    </div>
+    </div>
+    <br>
+    <div class="row" style="padding-left:150px;">
+    <div class="column" style="background-color:#aaa;">
+        <p></p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+    <p>
         Smart home was realised in 1975, when X10, a communication protocol for smart home
         was introduced. It sends radio frequency (RF) bursts of digital information onto a home's
         existing electric wiring to programmable outlets or switches, conveying commands to corresponding devices,
         controlling how and when devices operate. For example, a transmitter can
-        send a signal along the house's electric wiring, telling a device to turn on at a specific time.<br>
-        <br>
+        send a signal along the house's electric wiring, telling a device to turn on at a specific time.
+    </p>
+    </div>
+    </div>
+    <br>
+    <div class="row" style="padding-left:150px;">
+    <div class="column" style="background-color:#aaa;">
+    <p>
         However, since electrical wiring isn't designed to be free from radio-band "noise", X10 was not always fully reliable.
         Signals would be lost, and while smart homes can take commands, they cannot send data back to a central network,
         as X10 was initially a one-way technology. Luckily, two-way X10 devices became available at a later date, with a much higher cost.
     </p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        <p></p>
+    </div>
+    </div>
+    <div style="padding-left:150px;">
     <p>
         <h2>
             Examples of smart home technologies:
         </h2>
+    </p>
+    </div>
+    <div class="row" style="padding-left:150px;">
+        <div class="column" style="background-color:#aaa; height:400px;">
         <p>
             With technology as advanced as today, nearly every aspect of life have been introduced with technology:
             <un>
@@ -123,24 +175,34 @@
                     slower cookers and toasters; and, in the laundry room, washing machines and dryers.</li>
             </un>
         </p>
-    </p>
+        </div>
+        <div class="column" style="background-color:#bbb; height:400px;">
+            <p></p>
+        </div>
+    </div>
+    <div class="row" style="padding-left:150px;">
     <p>
         <h2>
             Benefits of having a Smart Home:
         </h2>
+    </p>
+    <div class="column" style="background-color:#aaa; height:300px;">
         <p>
             One of the benefits of having a smart home is providing a peace of mind to homeowners,
             allowing them to moniter thier homes remotely, countering dangers like a machine being
             left on or their front door left unlocked.<br>
-            <br>
             Smart homes are also beneficial for the elderly as it provides monitering that help seniors remain
             at home comfortably and safely, rather than moving to a nursary home or having a 24/7 home care.<br>
-            <br>
             Whats more, smart homes can accommodate user preferences. In one case, as soon as you arrive home,
             your front door will open, the lights will turn on and your favourite songs will start playing on your smart speakers.
         </p>
-    </p>
-
+    </div>
+    <div class="column" style="background-color:#bbb; height:300px;">
+        <p></p>
+    </div>
+    </div>
+<br>
+<br>
     <script>
         $(document).ready(function(){
           // Initialize Tooltip
