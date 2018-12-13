@@ -32,8 +32,7 @@
 			.person:hover {
 				border-color: #f1f1f1;
 			}
-
-			.navbar {
+ 			.navbar {
 				font-family: Montserrat, sans-serif;
 				margin-bottom: 0;
 				background-color: #2d2d30;
@@ -59,30 +58,24 @@
 				background:black;
 				display: block;
 				margin: 100px auto 0px auto;
-
-				top:125px;
+ 				top:125px;
 				left:400px;
 			}
 			#information{
 				text-align:center;
 				background-color:rgba(255, 255, 255, 0.4);
 				display:block;
-
-			}
+ 			}
 			#hi{
 				width:100%;
-
-			}
+ 			}
 		</style>
 		<script type='text/javascript'>
-
-			//https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript  Learn how to make breakout game: At 6th step
+ 			//https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript  Learn how to make breakout game: At 6th step
 			/*Notes: Implement time into the game,
 			Timer for the game,
 			Change bricks to trash, ball to fireball...?, paddle to something*/
-
-
-		</script>
+ 		</script>
 		<title>Game</title>
 	</head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -104,13 +97,11 @@
 			<li><a href="#shop">SHOP</a></li>
 			<li><a href="#faq">FAQ</a></li>
 			<li><a href="#login">LOGIN</a></li>
-
-		  </ul>
+ 		  </ul>
 		</div>
 	  </div>
 	</nav>
-
-		<div class='webpageContent'>
+ 		<div class='webpageContent'>
 			<canvas id="myGame" width="900" height="500"></canvas>
 			<div id="information">
 				<p>
@@ -132,8 +123,7 @@
 				</p>
 			</div>
 		</div>
-
-	<script src="javascript.js"></script>
+ 	<script src="javascript.js"></script>
 		<script type="text/javascript">
 			var canvas = document.getElementById("myGame");
 			var ctx = canvas.getContext("2d");
@@ -159,8 +149,7 @@
 			var score=0;
 			var totalScore=0;
 			var lives=3;
-
-			//var random=Math.floor((Math.random() * 5) + 0);
+ 			//var random=Math.floor((Math.random() * 5) + 0);
 			var easyQuestions=[
 				"What are one of the causes of global warming?\n 1. Recycling\n 2. Emission of carbon dioxide\n 3. Reforestation\n 4. Using bio-fuel",
 				"What are one of many ways to conserve the environment?\n 1. Burning of fossil fuels\n 2. Deforestation\n 3. Reforestation\n 4. Littering",
@@ -209,18 +198,15 @@
 				"3",
 				"3"
 			]
-
-			for (var c=0; c<brickColumnCount; c++){
+ 			for (var c=0; c<brickColumnCount; c++){
 				bricks[c]=[];
 				for (var r=0; r<brickRowCount; r++){
 					bricks[c][r]={x:0, y:0, status: 1};
 				}
 			}
-
-			document.addEventListener("keydown", keyDownHandler, false);
+ 			document.addEventListener("keydown", keyDownHandler, false);
 			document.addEventListener("keyup", keyUpHandler, false);
-
-			function keyDownHandler(e) {
+ 			function keyDownHandler(e) {
 				if(e.keyCode == 39 || e.keyCode==68) {
 					rightPressed = true;
 				}
@@ -236,8 +222,7 @@
 					leftPressed = false;
 				}
 			}
-
-			/*function randomQuestion(){*/
+ 			/*function randomQuestion(){*/
 			function easyRandom(){
 				var random=Math.floor((Math.random() * 5) + 0);
 				var a=null;
@@ -293,8 +278,7 @@
 					alert(text);
 				}
 			}
-
-			function normalRandom(){
+ 			function normalRandom(){
 				var random=Math.floor((Math.random() * 5) + 0);
 				var a=null;
 				var b=null;
@@ -349,8 +333,7 @@
 					alert(text);
 				}
 			}
-
-			function hardRandom(){
+ 			function hardRandom(){
 				var random=Math.floor((Math.random() * 5) + 0);
 				var a=null;
 				var b=null;
@@ -405,8 +388,7 @@
 					alert(text);
 				}
 			}
-
-			function collisionDetection(){
+ 			function collisionDetection(){
 				for (var c=0; c<brickColumnCount; c++){
 					for (var r=0; r<brickRowCount; r++){
 						var b = bricks[c][r];
@@ -447,10 +429,7 @@
 								}
 								if (score==brickRowCount*brickColumnCount){
 									var get_local = localStorage.getItem('All User Account Information');
-
-
-
-									localStorage.setItem("score", totalScore);
+ 									localStorage.setItem("score", totalScore);
 									var finalScore=localStorage.getItem("score");
 									alert("You have completed the game!");
 									alert("You have a total score of "+finalScore+"!");
@@ -471,27 +450,22 @@
 					}
 				}
 			}
-
-
-			function drawScore(){
+ 			function drawScore(){
 				ctx.font="16px Arial";
 				ctx.fillStyle="#0095DD";
 				ctx.fillText("Score: "+totalScore, 8, 20);
 			}
-
-			/*function drawTimeCounter(){
+ 			/*function drawTimeCounter(){
 				ctx.font="16px Arial";
 				ctx.fillStyle="#0095DD";
 				ctx.fillText("Time: "+minutes+" min "+seconds+" s", 16, 20);
 			}*/
-
-			function drawLives(){
+ 			function drawLives(){
 				ctx.font="16px Arial";
 				ctx.fillStyle="#0095DD";
 				ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 			}
-
-			function drawBall() {
+ 			function drawBall() {
 				var electroball=document.getElementById("electroball");
 				var img=ctx.createPattern(electroball, "repeat");
 				ctx.beginPath();
@@ -507,8 +481,7 @@
 				ctx.fill();
 				ctx.closePath();
 			}
-
-			function drawBricks(){
+ 			function drawBricks(){
 				for(var c=0; c<brickColumnCount; c++){
 					for(var r=0; r<brickRowCount; r++){
 						if (bricks[c][r].status==1){
@@ -527,8 +500,7 @@
 					}
 				}
 			}
-
-			/*function timeCounter(){
+ 			/*function timeCounter(){
 				seconds=seconds+1;
 				if (seconds==60){
 					seconds=0;
@@ -540,8 +512,7 @@
 					location.reload();
 				}
 			}*/
-
-			function draw() {
+ 			function draw() {
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
 				//setInterval(timeCounter, 1000);
 				drawBricks();
@@ -550,8 +521,7 @@
 				drawScore();
 				drawLives();
 				collisionDetection();
-
-				if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+ 				if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
 					dx = -dx;
 				}
 				if(y + dy < ballRadius) {
@@ -580,24 +550,19 @@
 								dy=-speed;
 								paddleX=(canvas.width-paddleWidth)/2;
 							}
-
-							restart();
+ 							restart();
 						}
 					}
 				}
-
-				if(rightPressed && paddleX < canvas.width-paddleWidth) {
+ 				if(rightPressed && paddleX < canvas.width-paddleWidth) {
 					paddleX += 6.5;
 				}
 				else if(leftPressed && paddleX > 0) {
 					paddleX -= 6.5;
 				}
-
-
-				x += dx;
+ 				x += dx;
 				y += dy;
-
-				requestAnimationFrame(draw);
+ 				requestAnimationFrame(draw);
 			}
 			function start(){
 				alert("Welcome to Breakout: Save the world! \n Press OK to start the game");
