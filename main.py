@@ -1,10 +1,10 @@
-from flask import Flask, render_template
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, TextAreaField, RadioField, SelectField
-from wtforms.validators import InputRequired
+from flask import Flask, render_template, redirect, url_for
+import os
+import sys
+import sqlite3
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Thisisasecret!'
+app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 
 
 @app.route('/')
@@ -32,22 +32,20 @@ def faq():
     return render_template('faq.html')
 
 
-class MyForm(FlaskForm):
-    email = StringField('Email', validators=[InputRequired()])
-    password = PasswordField('Password', validators=[InputRequired()])
-    textarea = TextAreaField('Textarea')
-    radios = RadioField('Radios', default='option1', choices=[('option1', 'Option one is this'), ('option2', 'Option 2 can be something else')])
-    selects = SelectField('Select', choices=[('1', '1'), ('2', '2'), ('3', '3')])
-
-
-@app.route('/register/', methods=['GET', 'POST'])
-def form():
-    form = MyForm()
-
-    if form.validate_on_submit():
-        return render_template('results.html', email=form.email.data, password=form.password.data, textarea=form.textarea.data, radios=form.radios.data, selects=form.selects.data)
-    return render_template('form.html', form=form)
+@app.route('/login/')
+def login():
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "login_example.settings")
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
