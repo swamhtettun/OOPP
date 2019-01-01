@@ -24,12 +24,12 @@ var totalScore=0;
 var lives=3;
 //var random=Math.floor((Math.random() * 5) + 0);
 var easyQuestions=[
-    "What are one of the causes of global warming?\n 1. Recycling\n 2. Emission of carbon dioxide\n 3. Reforestation\n 4. Using bio-fuel",
-    "What are one of many ways to conserve the environment?\n 1. Burning of fossil fuels\n 2. Deforestation\n 3. Reforestation\n 4. Littering",
-    "Incomplete combustion of fossil fuels does not affect the environment in any way.\n 1. True\n 2. False",
-    "Carbon dioxide is part of greenhouse gases.\n 1. True\n 2. False",
-    "Global warming is causing a negative impact on the environment.\n 1. True\n 2. False",
-    "Global warming is a myth.\n 1. True\n 2. False"
+    "What is the definition of smart home?\n 1. A house that can think for itself \n 2. A house fitted with technology for comfort\n 3. A house lived by a genius\n 4. A house under the supervision of a highly sophisticated A.I.",
+    "What can a smart home NOT do?\n 1. Provides security\n 2. Energy efficient\n 3. Provide daily updates around the house\n 4. Provides convenience",
+    "When was the concept of smart home thought of and invented?\n 1. 1970\n 2. 1975\n 3. 1979\n 4. 2001",
+    "X10, a communication protocol, sends radio frequency burst of digital information to remotely control devices.\n 1. True\n 2. False",
+    "A transmitter can send a signal along the house's electric wiring, telling a device to turn on at a specific time.\n 1. True\n 2. False",
+    "X10 is fully reliable as a communication protocol.\n 1. True\n 2. False"
 ]
 var easyAnswers=[
     "2",
