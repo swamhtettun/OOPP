@@ -40,20 +40,20 @@ var easyAnswers=[
     "2"
 ]
 var normalQuestions=[
-    "What is most harmful to the environment?\n 1. Carbon monoxide\n 2. Carbon dioxide\n 3. Oxygen\n 4. Hydrogen",
-    "How can business or business leaders NOT reduce or reverse global warming?\n 1. Improve their energy efficiency\n 2. Usage of renewable energy\n 3. Reduce their carbon emissions\n 4. Offer customers high-carbon-emitting products",
-    "What can the community do to NOT help reduce global warming?\n 1. Organise a community event to raise awareness of global warming\n 2. Throw plastic, paper and metal trash into their respective recycling bin\n 3. Increase the usage of CFC products",
-    "What is CFC in its full name?\n 1. Chlorofluorocarbon\n 2. Carbonfluorochlorine\n 3. It does not have a full name",
-    "What does CFC do?\n 1. Reduce the amount of carbon dioxide in the air\n 2. Helps to reduce carbon monoxide in the air\n 3. Destroys the ozone layer",
-    "Can we reduce global warming by reducing the usage of air-conditioning?\n 1. Yes\n 2. No"
+    "What kind of devices is NOT part of a smart home?\n 1. Telephone\n 2. Smart phone\n 3. Roomba\n 4. Samrt lock",
+    "Can a person use their smart phones to remotely control other smart devices?\n 1. Yes\n 2. No",
+    "What is one of the benefits of having a smart home?\n 1. Cost\n 2. Reliability\n 3. Security\n 4. Learning ",
+    "What is another name for smart home?\n 1. Home Automation\n 2. Technologically adapt\n 3. House Intel",
+    "What does smart houses not include?\n 1. Centralized control of security locks\n 2.Surveillance cameras\n 3. Universal remote",
+    "Smart home uses radio frequency devices to enable the remote monitoring and management of appliances and systems, such as lighting and heating.?\n 1. Yes\n 2. No"
 ]
 var normalAnswers=[
     "1",
-    "4",
+    "1",
     "3",
     "1",
     "3",
-    "1"
+    "2"
 ]
 var hardQuestions=[
     "What is the device used to convert harmful gas into more harmless gas for vehicles?\n (Please answer in small letters)",
