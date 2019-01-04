@@ -1,14 +1,16 @@
-<!DOCTYPE HTML>
 <html>
 <head>
 <title>Welcome</title>
-<link rel="stylesheet" href={{ url_for('static', filename='css/shop.css') }} />
-<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 </head>
 <body>
+{% extends "layout.html" %}
+{% block content %}
 <div id="title">
 	<a href="http://127.0.0.1:5000/shop/">
-		<img id="logo" src= {{ url_for('static', filename='images/logo.png') }} />
+		<img id="logo" src= "{{ url_for('static', filename='images/logo.jpg') }}" />
 	</a>
 	<form>
 		<input id="searchBox" type="text" name="searchQuery">
@@ -32,20 +34,20 @@
 	{% endif %}
 	<div id="kart">
 		<a class="link" href="/cart/">
-			<img src={{url_for('static', filename='images/shoppingCart.png')}} id="cartIcon" />
+			<img src="{{url_for('static', filename='images/shoppingCart.png')}}" id="cartIcon" />
 			CART {{noOfItems}}
 		</a>
 	</div>
 </div>
 <div class="display">
 	<div class="displayCategory">
-		<h2>Shop by Category: </h2>
 		<ul>
 			{% for row in categoryData %}
 			<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
+	<br>
 	<div>
 		<h2>Items</h2>
 		{% for data in itemData %}
@@ -61,7 +63,7 @@
 				{% for row in data %}
 				<td>
 					<a href="/productDescription?productId={{row[0]}}">
-						<img src={{ url_for('static', filename='uploads/' + row[4]) }} id="itemImage" />
+						<img src="{{ url_for('static', filename='uploads/' + row[4]) }}" id="itemImage" />
 					</a>
 				</td>
 				{% endfor %}
@@ -77,6 +79,7 @@
 		{% endfor %}
 	</div>
 </div>
+{% endblock %}
 </body>
 </html>
 
