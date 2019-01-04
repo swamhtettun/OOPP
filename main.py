@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = 'random string'
 UPLOAD_FOLDER = 'static/uploads'
-ALLOWED_EXTENSIONS = set(['jpeg', 'jpg', 'png', 'gif'])
+ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png', 'gif']
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
@@ -306,7 +306,7 @@ def removeFromCart():
             msg = "removed successfully"
         except:
             conn.rollback()
-            msg = "error occured"
+            msg = "error occurred"
     conn.close()
     return redirect(url_for('root'))
 
