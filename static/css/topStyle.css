@@ -12,6 +12,7 @@
 	background-color: black;
 	display: inline-block;
 	width: 100%;
+	margin-top: 50px;
 }
 
 #searchBox {
@@ -90,7 +91,7 @@
 	float: left;
 }
 
-#cartIcon {
+#kartIcon {
 	height: 30px;
 	width: 30px;
 }
