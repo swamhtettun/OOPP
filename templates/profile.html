@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">SMARTHOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#guide">GUIDE</a></li>
+        <li><a href="#game">GAME</a></li>
+        <li><a href="#shop">SHOP</a></li>
+		<li><a href="#faq">FAQ</a></li>
+        <li><a href="#login">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</body>
+<br>
+<br>
+<h2><center>User Profile</center></h2>
+   <div class="col-sm-8 text-left">
+
+
+	  <!---Passion's pic and profile--->
+      <img src="Passion.jpg" id="Passionpic">
+
+	  <div id="description">
+      <h2>Amy</h2>
+      <p>Singapore</p>
+      <p>44 years old part-time-worker looking for a way to allow my family to live safely and comfortably</p>
+       </div>
+
+
+
+      <hr>
+
+
+
+	  <!---Things bought from website--->
+      <h3>Recent Purchases</h3>
+      <div class="bottom-con" id="chatbox">
+
+	  <img src="tzuchi.jpg" class = "chatpic">
+
+	  <div id="acttext">
+	  <p style="font-weight: bold;">Vaccum CLeaner</p>
+	  <p>About vaccumm cleaner:
+	  </p>
+	  </div>
+
+
+	  <img src="cleangreen.jpg" class = "chatpic 2">
+	  <div id="acttext2">
+	  <p style="font-weight: bold;">Refrigerator</p>
+	  <p>about:</p>
+	  </div> <!---class acttext--->
+
+
+	  </div> <!---id chatbox--->
+
+
+<h3>Post</h3>
+      <div class="bottom-con" id="chatbox2">
+
+	  <div class="chatreply">
+	  <img src="Passion.jpg" class="chatuser" >
+	  <p class="textinside">Bought a vaccuum cleaner and it is so convenient!!</p>
+	  <span class="time-right">11:01</span>
+	  </div>
+
+	  <div class="chatreply darker" >
+	  <img src="AnotherUser.jpg" class="chatuser">
+	  <p class="textinside">Oh,i have one too and its working great for me too:)</p>
+	  <span class="time-right">11:02</span>
+	  </div>
+
+	  <div class="chatreply">
+	  <img src="Passion.jpg" class="chatuser">
+	  <p class="textinside">Wish I had one:/</p>
+	  <span class="time-right">11:03</span>
+	  </div>
+
+
+	  <div class="chatreply darker">
+	  <img src="AnotherUser.jpg" class="chatuser">
+	  <p class="textinside">What else ois there available to be bought</p>
+	  <span class="time-right">11:04</span>
+	  </div>
+
+
+	  <div class="chatreply" id="box1" style="display: none;">
+	  <img src="Passion.jpg" class="chatuser">
+	  <p id="demo" class="textinside"></p>
+	  <span class="time-right">11:11</span>
+	  </div>
+
+	  <div class="chatreply darker" id="box2" style="display: none;">
+	  <img src="AnotherUser.jpg" class="chatuser">
+	  <p id="demo2" class="textinside"></p>
+	  <span class="time-right">11:13</span>
+	  </div>
+
+
+	  <hr>
+
+
+	  <!---Textarea and reply button--->
+	  <button type="button" id="reply-button" onclick="myFunction()" ondblclick="myDIV()">Reply</button>
+      <textarea id="myTextarea" rows="3" cols="90">Type here!</textarea>
+	  </div>
+
+	  <!---<button type="button" id="reply-button" onclick="alert('Login to your account to reply!')">Reply</button>
+	  <p id="box-reply"></p>---><!--- without user login --->
+
+
+    </div> <!--.col-sm-8 text-left-->
+</html>
