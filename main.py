@@ -148,6 +148,14 @@ def profileHome():
     return render_template("profileHome.html", loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems)
 
 
+@app.route("/account/profile/view/")
+def viewProfile():
+    if 'email' not in session:
+        return redirect(url_for('root'))
+    loggedIn, firstName, noOfItems = getLoginDetails()
+    return render_template("viewProfile.html", loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems)
+
+
 @app.route("/account/profile/edit/")
 def editProfile():
     if 'email' not in session:
