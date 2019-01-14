@@ -56,16 +56,16 @@ var normalAnswers=[
     "2"
 ]
 var hardQuestions=[
-    "What is the device used to convert harmful gas into more harmless gas for vehicles?\n (Please answer in small letters)",
-    "What is NOT one of the effects of global warming?\n 1. Increase in sea level\n 2. Unnatural changes to the seasons\n 3. Reduction of greenhouse gases\n 4. Destruction of the ozone layer",
-    "Which country currently emits the most greenhouse gases?\n 1. China\n 2. The United States\n 3. India\n 4. The United Kingdom",
-    "Which planet's poisonous atmosphere has been described as the product of a 'runaway greenhouse effect'?\n 1. Earth\n 2. Jupiter\n 3. Mars\n 4. Venus",
-    "Which of the following lightbulb types uses the least energy, and therefore results in fewer greenhouse gas emissions?\n 1. Halogen\n 2. Incandescent\n 3. Compact flourescent",
-    "How many human deaths per year does the World Health Organization attribute to climate change?\n 1. 10,500\n 2. 1,500\n 3. 150,000\n 4. 1,500,000"
+    "What is the roundabout monthly cost of having a smart home?\n 1. $100-$200\n 2. $35-$70\n 3. $100-$200\n 4. $200-$500",
+    "A smart home consists of devices connecting to one another using the Internet.\n 1. False\n 2. True",
+    "Which country invented the smart toilet?\n 1. Japan\n 2. The United States\n 3. India\n 4. China",
+    "Who was one of the following which invented the computer chip, which led to the invention of today's smart home technology?\n 1. Mike scott\n 2. Matthew Jeff\n 3. Tim Mathius\n 4. Jack Kilby",
+    "Which home appliance was first created, triggering the path towards smart home?\n 1. Washing Machine\n 2. Television\n 3. Vacuum Cleaner",
+    "Who created the remote control, which then became an essential part of modern life and smart home.?\n 1. Albert Einstien\n 2. Marie Curie\n 3. Nikola Tesla\n 4. Tomas Jefferson"
 ]
 var hardAnswers=[
-    "catalytic converter",
-    "3",
+    "4",
+    "2",
     "1",
     "4",
     "3",
