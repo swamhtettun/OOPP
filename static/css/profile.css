@@ -1,0 +1,295 @@
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+
+   img {
+	border-radius: 50%;
+	}
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color  */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 950px;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+
+
+     #center-container{
+	  height: 900px;
+	  }
+
+	 .col-sm-2 sidenav{
+	 padding-bottom: 900px;
+	 height: 900px;
+
+	 }
+
+
+	 .users{
+	 width: 50px;
+	 height: 50px;
+	 border-radius: 30px;
+	 position: relative;
+	 bottom: 75px;
+	 right: 80px;
+	 }
+
+
+
+	 .well{
+	 width: 190px;
+	 height: 175px;
+	 border-radius: 30px;
+	 border: 1px solid grey;
+	 padding: 30px 5px 40px 50px;
+
+	 }
+
+	 #side-title{
+	 padding-top: 5px;
+	 }
+
+	 #Passionpic{
+	 width: 200px;
+	 height: 200px;
+	 border-radius: 10px;
+	 position: relative;
+	 top: 100px;
+	 left: 30px;
+	 }
+
+	 #description{
+	 position: relative;
+	 left: 250px;
+	 bottom: 100px;
+	 width: 500px;
+
+
+	 }
+
+
+
+
+
+
+
+
+	 /* bottom boxes for recent activity & post */
+	 .bottom-con{
+	 border: 1px solid black;
+	 display: block;
+	 margin-bottom: 5px;
+	 height: 200px;
+	 border-radius: 20px;
+
+	 }
+
+
+
+	 #chatbox {
+
+	 padding: 20px 0 10px 20px;
+	 font-size: 10px;
+
+	 }
+
+
+	 #chatbox2 {
+	 overflow: auto;
+	 border-radius: 3px;
+
+
+	 }
+
+	 .chatpic {
+
+	 width: 50px;
+	 height: 50px;
+	 border-radius: 30px;
+
+
+	 }
+
+	 .2 {
+
+	 position: relative;
+	 bottom: 100px;
+
+
+	 }
+
+	 #acttext {
+	 margin-left: 70px;
+	 position: relative;
+	 bottom: 50px;
+	 width: 700px;
+
+	 }
+
+	 #acttext2 {
+	 margin-left: 70px;
+	 position: relative;
+	 bottom: 55px;
+	 width: 700px;
+
+	 }
+
+
+
+
+	 #reply-button {
+
+	 border: 1px solid lightblue;
+	 border-radius: 5px;
+	 margin: 0 0 5px 10px;
+	 float: right;
+	 position: relative;
+	 right: 10px;
+	 top: 30px;
+
+	 }
+
+	 #reply-button:hover {
+	 background-color: lightgreen;
+	 color: white;
+	 border-radius: 5px;
+	 }
+
+
+
+	.chatreply {
+	 border: 2px solid grey;
+	 border-radius: 5px;
+	 background-color: lightgrey;
+	 width: 700px;
+	 height: 80px;
+	 margin: 20px 0 20px 40px;
+	 padding: 15px;
+
+	}
+	.darker {
+	background-color: grey;
+	}
+
+
+
+	.chatuser {
+	 width: 50px;
+	 height: 50px;
+	 border-radius: 30px;
+	 float: left;
+
+	}
+
+	.time-right{
+	float: right;
+	color: #aaa;
+	padding-bottom: 5px;
+	}
+
+	.textinside {
+	padding: 10px 0 0 70px;
+
+
+	}
+
+	#myTextarea {
+	margin: 5px 0 5px 45px;
+	}
+
+    .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+    .fa:hover {
+    opacity: 0.7;
+}
+
+  .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+  .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
