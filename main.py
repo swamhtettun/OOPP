@@ -49,6 +49,7 @@ def getLoginDetails():
 
 @app.route("/shop/")
 def root():
+    request.args["searchQuery"]
     loggedIn, firstName, noOfItems = getLoginDetails()
     with sqlite3.connect('database.db') as conn:
         cur = conn.cursor()
