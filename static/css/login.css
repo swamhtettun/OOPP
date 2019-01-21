@@ -1,0 +1,12 @@
+body{
+    border-top-style:dotted;
+    border-bottom-style:dotted;
+    border-left-style:dotted;
+    border-right-style:dotted;
+    border-width:18px;
+    border-color:#9FB2C1;
+    padding:6px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 100px;
+}

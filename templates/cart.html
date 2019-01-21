@@ -6,6 +6,8 @@
 <link rel="stylesheet" href={{url_for('static', filename='css/topStyle.css') }} />
 </head>
 <body>
+{% extends "layout.html" %}
+{% block content %}
 <div id="title">
 	<a href="http://127.0.0.1:5000/shop/">
 	<img id="logo" src= {{ url_for('static', filename='images/logo.jpg') }} />
@@ -62,7 +64,10 @@
 		</div>
 	</div>
 </div>
-<a href="/checkout/">Proceed to checkout</a>
+<div id="checkout">
+	<a href="/checkout/">Proceed to checkout</a>
+</div>
+{% endblock %}
 </body>
 </html>
 

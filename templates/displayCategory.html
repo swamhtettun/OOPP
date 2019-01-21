@@ -2,13 +2,16 @@
 <html>
 <head>
 <title>Category: {{categoryName}}</title>
-<link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }} />
-<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/displayCategory.css') }}" />
 </head>
 <body>
+{% extends "layout.html" %}
+{% block content %}
 <div id="title">
 	<a href="http://127.0.0.1:5000/shop/">
-		<img id="logo" src= {{ url_for('static', filename='images/logo.jpg') }} />
+		<img id="logo" src= "{{ url_for('static', filename='images/logo.jpg') }}" />
 	</a>
 	<form>
 		<input id="searchBox" type="text" name="searchQuery">
@@ -32,7 +35,7 @@
 	{% endif %}
 	<div id="kart">
 		<a class="link" href="/cart/">
-			<img src={{url_for('static', filename='images/shoppingCart.png')}} id="cartIcon" />
+			<img src="{{url_for('static', filename='images/shoppingCart.png')}}" id="cartIcon" />
 			CART {{noOfItems}}
 		</a>
 	</div>
@@ -53,7 +56,7 @@
 			{% for row in itemData %}
 			<td>
 				<a href="/productDescription?productId={{row[0]}}">
-					<img src={{ url_for('static', filename='uploads/' + row[3]) }} id="itemImage" />
+					<img src="{{ url_for('static', filename='uploads/' + row[3]) }}" id="itemImage" />
 				</a>
 			</td>
 			{% endfor %}
@@ -68,5 +71,6 @@
 	</table>
 	{% endfor %}
 </div>
+{% endblock %}
 </body>
 </html>

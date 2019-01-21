@@ -1,6 +1,7 @@
 #itemImage {
 	height: 200px;
 	width: 150px;
+	margin: 42px;
 }
 
 .display {
@@ -10,8 +11,10 @@
 	margin-bottom: 20px;
 }
 
-table {
-	border-spacing: 20px;
+table, tr, td {
+    border: 1px solid black;
+    border-spacing: 20px;
+
 }
 
 #productName {
