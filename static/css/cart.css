@@ -49,11 +49,11 @@
 
 #seperator {
 	margin: 0px;
-	max-width: 400px;
+	max-width: 100%;
 }
 
 #total {
-	padding-left: 280px;
+	padding-left: 90%;
 }
 
 #itemNameTag {
@@ -66,6 +66,14 @@
 }
 
 #cartIcon {
-width: 15px;
-height; 15px;
+    width: 15px;
+    height; 15px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#checkout {
+    padding-left: 90%;
 }
