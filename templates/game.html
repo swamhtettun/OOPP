@@ -123,7 +123,12 @@
 			</div>
 		</div>
  	<script src="/static/js/gameVar.js"></script>
+	<script src="/static/js/makeRequest.js"></script>
 		<script type="text/javascript">
+ 			function injectCode(){
+
+ 			}
+
  			for (var c=0; c<brickColumnCount; c++){
 				bricks[c]=[];
 				for (var r=0; r<brickRowCount; r++){
@@ -357,10 +362,12 @@
 									var get_local = localStorage.getItem('All User Account Information');
  									localStorage.setItem("score", totalScore);
 									var finalScore=localStorage.getItem("score");
+									request("GET", `/url?finalScore=${finalScore}`, function(response){ alert(`Congradulations! You have won a ${JSON.parse(response)["dis"]}% discount coupon for scoring ${finalScore}.\n Your discount coupon is ${JSON.parse(response)["c"]}. \n Please copy the coupon code before closing. `) }).send();
 									alert("You have completed the game!");
 									alert("You have a total score of "+finalScore+"!");
 									var answer=prompt("Do you want to retry? \n Type in y/n, y for yes and n for no");
 									if (answer=="y"){
+										alert("The game will now reload itself.");
 										document.location.reload();
 									}
 									else if (answer=="n"){
@@ -462,6 +469,7 @@
 						if (!lives){
 							localStorage.setItem("score", totalScore);
 							var finalScore=localStorage.getItem("score");
+							request("GET", `/url?finalScore=${finalScore}`, function(response){ alert(`Congradulations! You have won a ${JSON.parse(response)["dis"]}% discount coupon for scoring ${finalScore}.\n Your discount coupon is ${JSON.parse(response)["c"]}. \n Please copy the coupon code before closing. `) }).send();
 							alert("GAME OVER.");
 							alert("You have a total score of "+finalScore+"!");
 							alert("The game will now restart itself.");

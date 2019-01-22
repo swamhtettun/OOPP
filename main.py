@@ -1,7 +1,7 @@
 from flask import *
 import sqlite3, hashlib, os
 from werkzeug.utils import secure_filename
-
+import ajaxRequest as ar
 
 app = Flask(__name__)
 app.secret_key = 'random string'
@@ -49,7 +49,6 @@ def getLoginDetails():
 
 @app.route("/shop/")
 def root():
-    request.args["searchQuery"]
     loggedIn, firstName, noOfItems = getLoginDetails()
     with sqlite3.connect('database.db') as conn:
         cur = conn.cursor()
@@ -401,6 +400,7 @@ def parse(data):
 
 
 if __name__ == '__main__':
+    app.add_url_rule(rule="/url", view_func=ar.allocateScore, methods=["GET"])
     app.run(debug=True)
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "login_example.settings")
     try:
@@ -412,3 +412,4 @@ if __name__ == '__main__':
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
