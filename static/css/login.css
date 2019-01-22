@@ -10,3 +10,15 @@ body{
     padding-top: 50px;
     margin: 100px;
 }
+
+.password {
+    margin-right: 24px;
+}
+
+.submit {
+    margin-left: 163px;
+}
+
+.here {
+    margin-left: 135px;
+}

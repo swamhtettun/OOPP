@@ -7,6 +7,42 @@ body{
     border-color:#9FB2C1;
     padding:6px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 130px;
     margin: 100px;
+}
+
+.password {
+    margin-right: 23px;
+}
+
+.cpassword {
+    margin-right: 81px;
+}
+
+.firstName {
+    margin-right: 33px;
+}
+
+.lastName {
+    margin-right: 31px;
+}
+
+.address {
+    margin-right: 14px;
+}
+
+.zipcode {
+    margin-right: 14px;
+}
+
+.phone {
+    margin-right: 59px;
+}
+
+.submit {
+    margin-left: 154px;
+}
+
+.here {
+    margin-left: 154px;
 }

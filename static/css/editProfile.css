@@ -7,7 +7,36 @@
     border-color:#9FB2C1;
     padding:6px;
     text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     margin: 100px;
+
+}
+
+.firstName {
+    margin-right: 32px;
+}
+
+.lastName {
+    margin-right: 35px;
+}
+
+.address {
+    margin-right: 18px;
+}
+
+.zipcode {
+    margin-right: 26px;
+}
+
+.phone {
+    margin-right: 62px;
+}
+
+.save {
+    margin-left: 170px;
+}
+
+.here {
+    margin-left: 131px;
 }

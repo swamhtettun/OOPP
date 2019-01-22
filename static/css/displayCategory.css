@@ -3,3 +3,44 @@ table, tr, td {
     border-spacing: 20px;
 
 }
+
+#itemImage {
+	height: 200px;
+	width: 150px;
+	margin: 42px;
+}
+
+.display {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.displayCategory ul li {
+	font-size: 20px;
+}
+
+.display ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.display li {
+  float: left;
+}
+
+.display li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.display li a:hover {
+  background-color: #111;
+}
