@@ -61,7 +61,7 @@ def root():
 
 
 @app.route("/add/")
-def admin():
+def add():
     with sqlite3.connect('database.db') as conn:
         cur = conn.cursor()
         cur.execute("SELECT categoryId, name FROM categories")
