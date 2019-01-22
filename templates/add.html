@@ -2,21 +2,22 @@
 <html>
 <head>
 <title>Admin</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add.css') }}" />
 </head>
 <body>
 <h2>Add items</h2>
 <form action="/addItem/" method="POST" enctype="multipart/form-data">
-	Name: <input type="text" name="name"><br>
-	Price: <input type="text" name="price"><br>
-	Description: <textarea name="description" rows=3 cols="40"></textarea><br>
-	Image: <input type="file" name="image"><br>
-	Stock: <input type="text" name="stock"><br>
-	Category: <select name="category">
+	<p class="name">Name: <input type="text" name="name"><br></p>
+	<p class="price">Price: <input type="text" name="price"><br>
+	<p class="description">Description: <textarea name="description" rows=3 cols="22"></textarea><br>
+	<p class="image">Image: <input type="file" name="image"><br>
+	<p class="stock">Stock: <input type="text" name="stock"><br>
+	<p class="category">Category: <select name="category">
 		{% for row in categories %}
 			<option value="{{row[0]}}">{{row[1]}}</option>
 		{% endfor %}
-	</select><br>
-	<input type="submit">
+	</select><br><br>
+	<p class="submit"><input type="submit"></p>
 </form>
 </body>
 </html>
