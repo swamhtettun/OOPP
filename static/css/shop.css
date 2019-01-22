@@ -40,6 +40,7 @@ table, tr, td {
 
 .display li {
   float: left;
+  padding-left: 53px;
 }
 
 .display li a {
