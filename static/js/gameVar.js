@@ -40,7 +40,7 @@ var easyAnswers=[
     "2"
 ]
 var normalQuestions=[
-    "What kind of devices is NOT part of a smart home?\n 1. Telephone\n 2. Smart phone\n 3. Roomba\n 4. Samrt lock",
+    "What kind of devices is NOT part of a smart home?\n 1. Telephone\n 2. Smart phone\n 3. Roomba\n 4. Smart lock",
     "Can a person use their smart phones to remotely control other smart devices?\n 1. Yes\n 2. No",
     "What is one of the benefits of having a smart home?\n 1. Cost\n 2. Reliability\n 3. Security\n 4. Learning ",
     "What is another name for smart home?\n 1. Home Automation\n 2. Technologically adapt\n 3. House Intel",
@@ -56,7 +56,7 @@ var normalAnswers=[
     "2"
 ]
 var hardQuestions=[
-    "What is the roundabout monthly cost of having a smart home?\n 1. $100-$200\n 2. $35-$70\n 3. $100-$200\n 4. $200-$500",
+    "What is the roundabout monthly cost of having a smart home?\n 1. $10-$20\n 2. $35-$70\n 3. $100-$200\n 4. $200-$500",
     "A smart home consists of devices connecting to one another using the Internet.\n 1. False\n 2. True",
     "Which country invented the smart toilet?\n 1. Japan\n 2. The United States\n 3. India\n 4. China",
     "Who was one of the following which invented the computer chip, which led to the invention of today's smart home technology?\n 1. Mike scott\n 2. Matthew Jeff\n 3. Tim Mathius\n 4. Jack Kilby",
