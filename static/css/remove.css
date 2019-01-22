@@ -1,13 +1,23 @@
-table {
-	border-width: 10px;
+table, td {
+	border: 3px solid lime;
+    border-spacing: 20px;
+    text-align: center;
 }
 
 #itemImage {
-	height: 100px;
-	width: 80px;
+	height: 200px;
+	width: 150px;
+	margin: 42px;
 }
 
 #cartIcon {
 width: 15px;
 height; 15px;
+}
+
+.display {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
