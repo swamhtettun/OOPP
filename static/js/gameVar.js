@@ -45,7 +45,7 @@ var normalQuestions=[
     "What is one of the benefits of having a smart home?\n 1. Cost\n 2. Reliability\n 3. Security\n 4. Learning ",
     "What is another name for smart home?\n 1. Home Automation\n 2. Technologically adapt\n 3. House Intel",
     "What does smart houses not include?\n 1. Centralized control of security locks\n 2.Surveillance cameras\n 3. Universal remote",
-    "Smart home uses radio frequency devices to enable the remote monitoring and management of appliances and systems, such as lighting and heating.?\n 1. Yes\n 2. No"
+    "Smart home uses radio frequency devices to enable the remote monitoring and management of appliances and systems, such as lighting and heating?\n 1. Yes\n 2. No"
 ]
 var normalAnswers=[
     "1",
@@ -61,7 +61,7 @@ var hardQuestions=[
     "Which country invented the smart toilet?\n 1. Japan\n 2. The United States\n 3. India\n 4. China",
     "Who was one of the following which invented the computer chip, which led to the invention of today's smart home technology?\n 1. Mike scott\n 2. Matthew Jeff\n 3. Tim Mathius\n 4. Jack Kilby",
     "Which home appliance was first created, triggering the path towards smart home?\n 1. Washing Machine\n 2. Television\n 3. Vacuum Cleaner",
-    "Who created the remote control, which then became an essential part of modern life and smart home.?\n 1. Albert Einstien\n 2. Marie Curie\n 3. Nikola Tesla\n 4. Tomas Jefferson"
+    "Who created the remote control, which then became an essential part of modern life and smart home?\n 1. Albert Einstien\n 2. Marie Curie\n 3. Nikola Tesla\n 4. Tomas Jefferson"
 ]
 var hardAnswers=[
     "4",
