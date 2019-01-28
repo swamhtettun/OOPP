@@ -6,13 +6,13 @@ with dbOpen("database.db") as c:
     c.execute("CREATE TABLE IF NOT EXISTS discountCode(code TEXT, discount INTEGER)")
 
 with dbOpen("database.db") as c:
-    c.execute("CREATE TABLE IF NOT EXISTS easyQuestion(question TEXT, ans1 TEXT, ans2 TEXT, ans3 TEXT, ans4 TEXT, true TEXT)")
+    c.execute("CREATE TABLE IF NOT EXISTS easyQuestion(question TEXT, answer TEXT)")
 
 with dbOpen("database.db") as c:
-    c.execute("CREATE TABLE IF NOT EXISTS normalQuestion(question TEXT, ans1 TEXT, ans2 TEXT, ans3 TEXT, ans4 TEXT, true TEXT)")
+    c.execute("CREATE TABLE IF NOT EXISTS normalQuestion(question TEXT, answer TEXT)")
 
 with dbOpen("database.db") as c:
-    c.execute("CREATE TABLE IF NOT EXISTS hardQuestion(question TEXT, ans1 TEXT, ans2 TEXT, ans3 TEXT, ans4 TEXT, true TEXT)")
+    c.execute("CREATE TABLE IF NOT EXISTS hardQuestion(question TEXT, answer TEXT)")
 
 def allocateScore():
     print(request.args.get("finalScore"))
