@@ -163,7 +163,7 @@ def editProfile():
     loggedIn, firstName, noOfItems = getLoginDetails()
     with sqlite3.connect('database.db') as conn:
         cur = conn.cursor()
-        cur.execute("SELECT userId, email, firstName, lastName, address1, address2, zipcode, city, state, country, phone FROM users WHERE email = ?", (session['email'], ))
+        cur.execute("SELECT userId, email, firstName, lastName, address, zipcode, phone FROM users WHERE email = ?", (session['email'], ))
         profileData = cur.fetchone()
     conn.close()
     return render_template("editProfile.html", profileData=profileData, loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems)
@@ -205,17 +205,13 @@ def updateProfile():
         email = request.form['email']
         firstName = request.form['firstName']
         lastName = request.form['lastName']
-        address1 = request.form['address1']
-        address2 = request.form['address2']
+        address = request.form['address']
         zipcode = request.form['zipcode']
-        city = request.form['city']
-        state = request.form['state']
-        country = request.form['country']
         phone = request.form['phone']
         with sqlite3.connect('database.db') as con:
                 try:
                     cur = con.cursor()
-                    cur.execute('UPDATE users SET firstName = ?, lastName = ?, address1 = ?, address2 = ?, zipcode = ?, city = ?, state = ?, country = ?, phone = ? WHERE email = ?', (firstName, lastName, address1, address2, zipcode, city, state, country, phone, email))
+                    cur.execute('UPDATE users SET firstName = ?, lastName = ?, address = ?, zipcode = ?, phone = ? WHERE email = ?', (firstName, lastName, address, zipcode, phone, email))
 
                     con.commit()
                     msg = "Saved Successfully"
@@ -226,7 +222,7 @@ def updateProfile():
         return redirect(url_for('editProfile'))
 
 
-@app.route("/loginForm/")
+@app.route("/loginForm/", methods = ['POST', 'GET'])
 def loginForm():
     if 'email' in session:
         return redirect(url_for('root'))
@@ -316,7 +312,27 @@ def removeFromCart():
             conn.rollback()
             msg = "error occurred"
     conn.close()
-    return redirect(url_for('root'))
+    return redirect(url_for('cart'))
+
+
+@app.route('/checkout/')
+def checkout():
+    return render_template('checkout.html')
+
+def restartCart():
+    if 'email' not in session:
+        return redirect(url_for('loginForm'))
+    else:
+        print('running')
+        productId = int(request.args.get('productId'))
+        with sqlite3.connect('database.db') as conn:
+            cur = conn.cursor()
+            cur.execute("SELECT userId FROM users WHERE email = ?", (session['email'], ))
+            userId = cur.fetchone()[0]
+            cur.execute("DELETE FROM kart (userId, productId) VALUES (?, ?)", (userId, productId))
+            conn.commit()
+        conn.close()
+        return redirect(url_for('root'))
 
 
 @app.route("/logout/")
@@ -343,18 +359,14 @@ def register():
         email = request.form['email']
         firstName = request.form['firstName']
         lastName = request.form['lastName']
-        address1 = request.form['address1']
-        address2 = request.form['address2']
+        address = request.form['address']
         zipcode = request.form['zipcode']
-        city = request.form['city']
-        state = request.form['state']
-        country = request.form['country']
         phone = request.form['phone']
 
         with sqlite3.connect('database.db') as con:
             try:
                 cur = con.cursor()
-                cur.execute('INSERT INTO users (password, email, firstName, lastName, address1, address2, zipcode, city, state, country, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (hashlib.md5(password.encode()).hexdigest(), email, firstName, lastName, address1, address2, zipcode, city, state, country, phone))
+                cur.execute('INSERT INTO users (password, email, firstName, lastName, address, zipcode, phone) VALUES (?, ?, ?, ?, ?, ?, ?)', (hashlib.md5(password.encode()).hexdigest(), email, firstName, lastName, address, zipcode, phone))
 
                 con.commit()
 
