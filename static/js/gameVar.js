@@ -22,6 +22,9 @@ var bricks=[];
 var score=0;
 var totalScore=0;
 var lives=3;
+var easyQuestionsNo=5;
+var normalQuestionsNo=5;
+var hardQuestionsNo=5;
 //var random=Math.floor((Math.random() * 5) + 0);
 var easyQuestions=[
     "What is the definition of smart home?\n 1. A house that can think for itself \n 2. A house fitted with technology for comfort\n 3. A house lived by a genius\n 4. A house under the supervision of a highly sophisticated A.I.",
