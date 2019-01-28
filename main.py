@@ -401,7 +401,6 @@ def parse(data):
 
 
 
-
 #@app.route('/products')
 #def products():
 #    return {}
@@ -413,6 +412,7 @@ def parse(data):
 
 if __name__ == '__main__':
     app.add_url_rule(rule="/url", view_func=ar.allocateScore, methods=["GET"])
+    app.add_url_rule(rule="/request", view_func=ar.addFunction, methods=["POST"])
     app.run(debug=True)
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "login_example.settings")
     try:
