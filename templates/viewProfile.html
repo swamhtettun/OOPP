@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="/static/css/profile.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />
     <script src="/static/js/profile.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -22,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">SMARTHOME</a>
+      <a class="navbar-brand" href="http://127.0.0.1:5000/">SMARTHOME</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -37,6 +38,37 @@
 </nav>
 
 </body>
+<div id="title">
+	<a href="http://127.0.0.1:5000/shop/">
+		<img id="logo" src= "{{ url_for('static', filename='images/logo.jpg') }}" />
+	</a>
+	<form>
+		<input id="searchBox" type="text" name="searchQuery">
+		<input id="searchButton" type="submit" value="Search">
+	</form>
+
+	{% if not loggedIn %}
+	<div id="signInButton">
+		<a class="link" href="/loginForm/">Sign In</a>
+	</div>
+	{% else %}
+	<div class="dropdown">
+		<button class="dropbtn">Hello, <br>{{firstName}}</button>
+		<div class="dropdown-content">
+			<a href="/account/orders/">Your orders</a>
+			<a href="/account/profile/view/">Your profile</a>
+			<hr>
+			<a href="/logout/">Sign Out</a>
+		</div>
+	</div>
+	{% endif %}
+	<div id="kart">
+		<a class="link" href="/cart/">
+			<img src="{{url_for('static', filename='images/shoppingCart.png')}}" id="cartIcon" />
+			CART {{noOfItems}}
+		</a>
+	</div>
+</div>
 <br>
 <br>
 <h2><center>User Profile</center></h2>
@@ -44,80 +76,58 @@
 
 
 	  <!---Passion's pic and profile--->
-      <img src="Passion.jpg" id="Passionpic">
+      <img id="Passionpic" src= {{ url_for('static', filename='images/samuelProfile.jpg') }} />
 
 	  <div id="description">
       <h2>{{firstName}}</h2>
       <p>Singapore</p>
       <p>44 years old part-time-worker looking for a way to allow my family to live safely and comfortably</p>
        </div>
-
-
-
       <hr>
 
-
-
-	  <!---Things bought from website--->
-      <h3>Recent Purchases</h3>
-      <div class="bottom-con" id="chatbox">
-
-	  <img src="tzuchi.jpg" class = "chatpic">
-
-	  <div id="acttext">
-	  <p style="font-weight: bold;">Vaccum CLeaner</p>
-	  <p>About vaccumm cleaner:
-	  </p>
-	  </div>
-
-
-	  <img src="cleangreen.jpg" class = "chatpic 2">
-	  <div id="acttext2">
-	  <p style="font-weight: bold;">Refrigerator</p>
-	  <p>about:</p>
-	  </div> <!---class acttext--->
-
-
-	  </div> <!---id chatbox--->
-
-
+	<div class="display">
+		<a href="/account/profile/edit/">Edit Profile</a><br><br>
+		<a href="/account/profile/changePassword/">Change password</a>
+	</div>
+	<hr>
+	<br>
 <h3>Post</h3>
       <div class="bottom-con" id="chatbox2">
 
 	  <div class="chatreply">
-	  <img src="Passion.jpg" class="chatuser" >
+	  <img src="/static/images/comProfile.jpg" class="chatuser" >
 	  <p class="textinside">Bought a vaccuum cleaner and it is so convenient!!</p>
 	  <span class="time-right">11:01</span>
 	  </div>
 
 	  <div class="chatreply" >
-	  <img src="AnotherUser.jpg" class="chatuser">
+	  <img src="/static/images/com2Profile.jpg" class="chatuser">
 	  <p class="textinside">Oh,i have one too and its working great for me too:)</p>
 	  <span class="time-right">11:02</span>
 	  </div>
 
 	  <div class="chatreply">
-	  <img src="/static/images/Passion.jpg" class="chatuser">
+	  <img src="/static/images/com3Profile.jpg" class="chatuser">
 	  <p class="textinside">Wish I had one:/</p>
 	  <span class="time-right">11:03</span>
 	  </div>
 
 
 	  <div class="chatreply">
-	  <img src="/static/images/AnotherUser.jpg" class="chatuser">
+	  <img src="/static/images/com4Profile.jpg" class="chatuser">
 	  <p class="textinside">What else is there available to be bought</p>
 	  <span class="time-right">11:04</span>
 	  </div>
 
 
 	  <div class="chatreply" id="box1" style="display: none;">
-	  <img src="Passion.jpg" class="chatuser">
+	  <img src="/static/images/samuelProfile.jpg" class="chatuser">
 	  <p id="demo" class="textinside"></p>
 	  <span class="time-right">11:11</span>
 	  </div>
 
 	  <div class="chatreply darker" id="box2" style="display: none;">
-	  <img src="AnotherUser.jpg" class="chatuser">
+	  <img src="/static/images/samuelProfile.jpg" class="chatuser">
 	  <p id="demo2" class="textinside"></p>
 	  <span class="time-right">11:13</span>
 	  </div>

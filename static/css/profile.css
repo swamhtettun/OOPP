@@ -293,3 +293,14 @@
   background: #125688;
   color: white;
 }
+
+.display {
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+#title {
+    background: white;
+    colour: black;
+}
