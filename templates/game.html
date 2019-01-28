@@ -151,12 +151,11 @@
 			}
  			/*function randomQuestion(){*/
 			function easyRandom(){
-				var random=Math.floor((Math.random() * easyQuestionsNo) + 0);
+				var random=Math.floor((Math.random() * 5) + 0);
 				var a=null;
 				var b=null;
 				var z=null;
 				var text;
-				var difficulty=easy;
 				if (a==null){
 					a=random;
 					var studentAnswer=prompt(easyQuestions[random]);
@@ -173,7 +172,7 @@
 				}
 				else if (b==null){
 					while (random==a){
-						random=Math.floor((Math.random() * easyQuestionsNo) + 0);
+						random=Math.floor((Math.random() * 5) + 0);
 					}
 					b=random;
 					var studentAnswer=prompt(easyQuestions[random]);
@@ -190,7 +189,7 @@
 				}
 				else if (z==null){
 					while (random==a || random==b){
-						random=Math.floor((Math.random() * easyQuestionsNo) + 0);
+						random=Math.floor((Math.random() * 5) + 0);
 					}
 					z=random;
 					var studentAnswer=prompt(easyQuestions[random]);
@@ -207,12 +206,11 @@
 				}
 			}
  			function normalRandom(){
-				var random=Math.floor((Math.random() * normalQuestionsNo) + 0);
+				var random=Math.floor((Math.random() * 5) + 0);
 				var a=null;
 				var b=null;
 				var z=null;
 				var text;
-				var difficulty=normal;
 				if (a==null){
 					a=random;
 					var studentAnswer=prompt(normalQuestions[random]);
@@ -229,7 +227,7 @@
 				}
 				else if (b==null){
 					while (random==a){
-						random=Math.floor((Math.random() * normalQuestionsNo) + 0);
+						random=Math.floor((Math.random() * 5) + 0);
 					}
 					b=random;
 					var studentAnswer=prompt(normalQuestions[random]);
@@ -246,7 +244,7 @@
 				}
 				else if (z==null){
 					while (random==a || random==b){
-						random=Math.floor((Math.random() * normalQuestionsNo) + 0);
+						random=Math.floor((Math.random() * 5) + 0);
 					}
 					z=random;
 					var studentAnswer=prompt(normalQuestions[random]);
@@ -263,12 +261,11 @@
 				}
 			}
  			function hardRandom(){
-				var random=Math.floor((Math.random() * hardQuestionsNo) + 0);
+				var random=Math.floor((Math.random() * 5) + 0);
 				var a=null;
 				var b=null;
 				var z=null;
 				var text;
-				var difficulty=hard;
 				if (a==null){
 					a=random;
 					var studentAnswer=prompt(hardQuestions[random]);
@@ -285,7 +282,7 @@
 				}
 				else if (b==null){
 					while (random==a){
-						random=Math.floor((Math.random() * hardQuestionsNo) + 0);
+						random=Math.floor((Math.random() * 5) + 0);
 					}
 					b=random;
 					var studentAnswer=prompt(hardQuestions[random]);
@@ -302,7 +299,7 @@
 				}
 				else if (z==null){
 					while (random==a || random==b){
-						random=Math.floor((Math.random() * hardQuestionsNo) + 0);
+						random=Math.floor((Math.random() * 5) + 0);
 					}
 					z=random;
 					var studentAnswer=prompt(hardQuestions[random]);
