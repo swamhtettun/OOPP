@@ -2,6 +2,8 @@ from flask import *
 import sqlite3, hashlib, os
 from werkzeug.utils import secure_filename
 import ajaxRequest as ar
+import base64
+import json
 
 app = Flask(__name__)
 app.secret_key = 'random string'
@@ -291,7 +293,7 @@ def cart():
     totalPrice = 0
     for row in products:
         totalPrice += row[2]
-    return render_template("cart.html", products = products, totalPrice=totalPrice, loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems)
+    return render_template("cart.html", products = products, totalPrice=round(totalPrice, 2), loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems)
 
 
 @app.route("/removeFromCart/")
@@ -317,22 +319,16 @@ def removeFromCart():
 
 @app.route('/checkout/')
 def checkout():
+    token = request.cookies.get('session').split('.')[0]
+    user_dict = json.loads(base64.b64decode(token).decode("utf-8"))
+    print(type(user_dict))
+    email = user_dict.get('email')
+    with sqlite3.connect('database.db') as conn:
+        cur = conn.cursor()
+        cur.execute('SELECT "userId" FROM "users" WHERE email=?', (email,))
+        userId = cur.fetchone()[0]
+        cur.execute('DELETE FROM "kart" WHERE "userId"=?', (userId,))
     return render_template('checkout.html')
-
-def restartCart():
-    if 'email' not in session:
-        return redirect(url_for('loginForm'))
-    else:
-        print('running')
-        productId = int(request.args.get('productId'))
-        with sqlite3.connect('database.db') as conn:
-            cur = conn.cursor()
-            cur.execute("SELECT userId FROM users WHERE email = ?", (session['email'], ))
-            userId = cur.fetchone()[0]
-            cur.execute("DELETE FROM kart (userId, productId) VALUES (?, ?)", (userId, productId))
-            conn.commit()
-        conn.close()
-        return redirect(url_for('root'))
 
 
 @app.route("/logout/")
@@ -400,15 +396,9 @@ def parse(data):
     return ans
 
 
-
-
-#@app.route('/products')
-#def products():
-#    return {}
-
-#@app.route('/add')
-#def addToCart():
-#    itemId = request.args.get('itemId');
+@app.route('/admin/')
+def admin():
+    return render_template('admin.html')
 
 
 if __name__ == '__main__':

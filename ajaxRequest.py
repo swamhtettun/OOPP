@@ -32,7 +32,7 @@ def allocateScore():
         with dbOpen("database.db") as c:
             c.execute("INSERT INTO discountCode (code, discount) VALUES (?, ?)",
                   (code, discount))
-    elif score>=1:
+    elif score>=153:
         print("start")
         code=secrets.token_hex(12)
         discount=10
